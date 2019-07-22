@@ -1,0 +1,7 @@
+interfaces:
+ - name: Ethernet10
+   description: Spine1
+   address: 100.1.1.1/31
+ - name: Ethernet11
+   description: Spine2
+   address: 101.1.2.1/31

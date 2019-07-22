@@ -1,0 +1,23 @@
+
+
+[eos_switches]
+#15.112.124.40
+#15.112.124.41
+#leaf01  ansible_network_os=eos
+leaf01 ansible_host=15.112.124.40
+leaf02 ansible_host=15.112.124.41
+
+
+[eos_switches:vars]
+
+# Used for eapi connection once SSH'd in
+#username=eapi
+#password=zaq1XSW@
+#transport=https
+
+#ansible_connection: network_cli
+ansible_become=yes
+ansible_become_method=enable
+ansible_network_os=eos
+ansible_user=admin
+ansible_password=zaq1XSW@

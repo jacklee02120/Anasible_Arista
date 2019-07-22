@@ -1,0 +1,25 @@
+---
+
+- hosts: eos_switches
+  gather_facts: false
+ # connection: local
+  connection: network_cli
+
+
+  tasks:
+    - name: config vlan  
+      eos_l2_interface:
+#        provider: "{{ creds }}"
+        name: "{{ item.port }}"
+        mode: access
+        access_vlan: "{{ item.id }}"   
+      with_items: "{{ Vlan_ip_ports }}"
+ 
+    - name: config vlan IP 
+      eos_config:
+ #       provider: "{{ creds }}"
+        lines:
+          - ip address {{ item.ip }}
+        parents: interface vlan {{ item.id }}   
+      with_items: "{{ Vlan_ip_ports }}"
+ 

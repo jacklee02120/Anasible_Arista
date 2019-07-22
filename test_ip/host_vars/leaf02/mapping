@@ -1,0 +1,26 @@
+---
+Vlan_ip_ports:
+  - id: 2
+    port: Ethernet2
+    ip: 10.2.2.2/24
+  - id: 3            
+    port: Ethernet3
+    ip: 10.2.3.3/24
+  - id: 4            
+    port: Ethernet4
+    ip: 10.2.4.4/24
+  - id: 5            
+    port: Ethernet5
+    ip: 10.2.5.5/24
+  - id: 6            
+    port: Ethernet6
+    ip: 10.2.6.6/24
+  - id: 7            
+    port: Ethernet7
+    ip: 10.2.7.7/24
+  - id: 8            
+    port: Ethernet8
+    ip: 10.2.8.8/24
+  - id: 9            
+    port: Ethernet9
+    ip: 10.2.9.9/24
